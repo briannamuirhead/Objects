@@ -51,7 +51,7 @@ QUnit.test("Test the roll over behavior.", function (assert) {
     myPet.hunger = 0;
     myPet.sleepy = 0;
     myPet.awake = false;
-    result = myPet.shake();
+    result = myPet.rollOver();
     assert.deepEqual(result, "Zzzz...", "Success - a dog won't roll over if it's sleeping" );
     myPet = new Pet("test", "Cat");
     var result = myPet.rollOver();
@@ -162,7 +162,7 @@ QUnit.test("Test the speak behavior", function (assert) {
     myPet.hunger = 0;
     myPet.sleepy = 0;
     var result = myPet.speak();
-    assert.deepEqual(result, "Ugh. meow.", "Success - a cat can speak!");
+    assert.deepEqual(result, "Ugh. Meow.", "Success - a cat can speak!");
     var result = myPet.hunger;
     assert.equal(result, 1, "Success - speaking increases a cats's hunger");
     var result = myPet.sleepy;
